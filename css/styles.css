@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+
+body{
+    align-items: center;
+    margin-left: 30%;
+    font-family:'Slabo 27px', serif;
+}
+  
+
+.login{
+    margin-top: 70px;
+    width: 300px;
+    height: 250px;
+    border: 2px solid black ;
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    align-items: center;
+    text-align: center;
+}
+
+.username{
+    margin: 25px;
+    width: 180px;
+    text-align: center;
+
+}
+
+.password{
+    margin: 25px;
+    margin-top: -10px;
+    width: 180px;
+    text-align: center;
+}
+
+.btnIngresar{
+    width: 90px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+.btnIngresar:hover{
+    background-color: brown;
+}
+
+.p1{
+    font-size: 30px;  
+
+}
