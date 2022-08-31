@@ -1,4 +1,3 @@
-
 //logIn
 let users = []
 
@@ -6,6 +5,7 @@ let users = []
 const userLog = document.getElementById("username")
 const userPass = document.querySelector("#password")
 const btnIngresar = document.querySelector("#btnIngresar")
+const contenedor1 = document.querySelector("#contenedor1")
 
 //Fetch async
 const usersApi = async () => {
@@ -28,7 +28,24 @@ const confirmarUsuario = () => {
 
         if (accesoCorrecto.user == userLog.value && accesoCorrecto.pass == userPass.value) {
 
-            console.log("cargando pag")
+            if (accesoCorrecto.user_type == "comex"){
+                
+                document.location.href = "comex.html";
+
+            } if (accesoCorrecto.user_type == "admin") {
+                
+                document.location.href = "https://es.stackoverflow.com/questions/119861/problemas-al-redireccionar-y-validar-form-en-javascript"
+
+            }if (accesoCorrecto.user_type == null) {
+
+                    Swal.fire({
+                    title: 'Usuario sin permisos',
+                    text: 'Contacta al administrador',
+                    icon: 'warning',
+                    confirmButtonText: 'OK'
+          })
+            }
+
             
         }else{
     
@@ -60,3 +77,18 @@ const confirmarEvento = () =>{
 
 //Listeners
 btnIngresar.addEventListener("click", confirmarUsuario)
+
+
+function mostrarUserType() {
+    
+    contenedor1.innerHTML = ""
+    
+    const mensaje = document.createElement("div")
+    mensaje.className = "sinUserType"
+    mensaje.innerHTML = `
+        <h1> Usuario sin tipo definido</h1>
+        <h2> contacte al administrador</h2>
+        `
+    contenedor1.append(mensaje)
+
+}
