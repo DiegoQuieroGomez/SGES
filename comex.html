@@ -14,15 +14,44 @@
         Sistema de registros
     </h1>
 
-    <input type="button" class="bnt1" value="Ingresar carga">
-    <input type="button" class="bnt1" value="Listar cargas">
-    <input type="button" class="bnt1" value="Salir">
+    <input type="button" class="btn-ingresarCarga" id="btn-ingresarCarga" value="Ingresar carga">
+    <input type="button" class="bnt2" value="Listar cargas">
+    <input type="button" class="bnt3" value="Salir">
 
     <div class="contenedor1" id="contenedor1">
+        <h2 class="formTittle">Ingreso de Cargas</h2>
         
+        <label>Cierre de Negocio</label>
+        <input type="text" class="cierreNegocio">
+
+        
+        <label>Valor CIF</label>
+        <input type="text" class="valorCIF">
 
 
+        <label>Origen</label>
+        <select name="origen" class="origen">
+            <option value="frigomerc">Frigomerc</option>
+            <option value="beef">Beef Paraguay</option>
+            <option value="redCarnica">Red Carnica</option>
+            <option value="minerva">Minerva</option>
+            <option value="pulsa">Pulsa</option>
+            <option value="carrasco">Carrasco</option>
+        </select>
 
+        <label>Cliente</label>
+        <select name="cliente" class="cliente">
+            <option value="ramirez">Ramirez</option>
+            <option value="walmart">Walmart</option>
+            <option value="cencosud">Cencosud</option>
+            <option value="frima">Frima</option>
+            <option value="carnesNuble ">Carnes Ñuble</option>
+            <option value="lucar">Lucar</option>
+
+        </select>
+
+        <label>Transporte</label>
+        <input type="search" id="tranSearch">
 
     </div>
 
@@ -33,6 +62,6 @@
 
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="app/app.js"></script>
+    <script src="app/appComex.js"></script>
 </body>
 </html>

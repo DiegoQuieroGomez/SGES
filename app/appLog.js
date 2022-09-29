@@ -28,15 +28,15 @@ const confirmarUsuario = () => {
 
         if (accesoCorrecto.user == userLog.value && accesoCorrecto.pass == userPass.value) {
 
-            if (accesoCorrecto.user_type == "comex"){
+            if (accesoCorrecto.userType == "comex"){
                 
                 document.location.href = "comex.html";
 
-            } if (accesoCorrecto.user_type == "admin") {
+            } if (accesoCorrecto.userType == "admin") {
                 
                 document.location.href = "https://es.stackoverflow.com/questions/119861/problemas-al-redireccionar-y-validar-form-en-javascript"
 
-            }if (accesoCorrecto.user_type == null) {
+            }if (accesoCorrecto.userType == null) {
 
                     Swal.fire({
                     title: 'Usuario sin permisos',
